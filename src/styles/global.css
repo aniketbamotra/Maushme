@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'Nyght Serif';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../static/fonts/NyghtSerif-Regular.woff);
+}
+@font-face {
+    font-family: 'Nyght Serif';
+    font-weight: 300;
+    font-style: normal;
+    src: url(../static/fonts/NyghtSerif-Light.woff);
+}
+@font-face {
+    font-family: 'Nyght Serif';
+    font-weight: 700;
+    font-style: normal;
+    src: url(../static/fonts/NyghtSerif-Bold.woff);
+}
+
+:root{
+    --heading-font: 'Nyght Serif', Serif;
+    --body-font: 'Montserrat', sans-serif;
+}
+
+.heading{
+    font-family: var(--heading-font);
+}
+.body{
+    font-family: var(--body-font);
+}
+
+
+
+/* Custome css */
+
+.hero-text{
+    line-height: 4.5rem;
+}
+
+.indicator-circle{
+    outline: 1px solid;
+}
+.indicator-circle-1::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: black;
+    border-radius: 999px;
+    transform: translate(-1px, -1px);
+}
+.panel-2 .indicator-circle{
+    outline: 1px solid white;
+}
+.panel-2 .indicator-circle-1::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border-radius: 999px;
+    transform: translate(-1px, -1px);
+}
+.panel-2 .indicator-circle-2::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 999px;
+    transform: translate(-1px, -1px);
+}
+.reed{
+    scale: 2;
+}
+.atc-btn{
+    border: 1px solid;
+}
+.creator-img{
+    top: 45%;
+}

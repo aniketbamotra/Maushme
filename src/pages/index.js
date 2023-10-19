@@ -5,13 +5,15 @@ import AnimPanel1 from "../components/AnimPanel1";
 import Bestsellers from "../components/Bestsellers";
 import About from "../components/About";
 import lightLogo from "../images/light-logo.png"
+import comimgImg from "../images/coming.png"
 
 const IndexPage = () => {
   return (
     <main className="grid grid-cols-12">
       {/* <Topbar /> */}
       <div className="hero-section col-span-full relative">
-        <video src={heroVid} loop muted className="relative -z-10 h-screen w-screen md:object-cover object-right object-fill" />
+        {/* <video src={heroVid} loop muted className="relative -z-10 h-screen w-screen md:object-cover object-right object-fill" /> */}
+        <img src={comimgImg} alt="bg" className="relative -z-10 h-screen w-screen md:object-cover object-right object-cover" />
         <div className="z-10 absolute flex flex-col justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <img src={lightLogo} alt="logo" className=" " />
         <h1 className="hero-text heading md:text-4xl text-3xl  text-white text-center">

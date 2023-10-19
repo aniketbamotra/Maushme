@@ -9,7 +9,7 @@ import comimgImg from "../images/coming.png"
 
 const IndexPage = () => {
   return (
-    <main className="grid grid-cols-12">
+    <main className="grid grid-cols-12 overflow-hidden">
       {/* <Topbar /> */}
       <div className="hero-section col-span-full relative">
         {/* <video src={heroVid} loop muted className="relative -z-10 h-screen w-screen md:object-cover object-right object-fill" /> */}

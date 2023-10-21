@@ -86,4 +86,11 @@
     top: 45%;
 }
 
+.coll-title{
+    padding: 0 35rem;
+    line-height: 96px;
+}
 
+.badge{
+    border: 1px solid black;
+}

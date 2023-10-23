@@ -42,15 +42,19 @@ const Collections = () => {
     const sphereAnim = document.querySelector(".ani-sphere");
     const sphereAnimPath = document.querySelector(".ani-path");
     const sphereColor = document.querySelector(".sphere-color");
+    const sphereColor1 = document.querySelector(".sphere-color1");
+    const sphereColor2 = document.querySelector(".sphere-color2");
+    const sphereColor3 = document.querySelector(".sphere-color3");
+
 
     const sphereTl = gsap
       .timeline({
         scrollTrigger: {
           trigger: sphereAnimTrig,
-          scrub: true,
+          scrub: .5,
           start: "-30% top",
           end: "290% top",
-          markers: true,
+          markers: true, 
         },
       })
       .to(sphereAnim, {
@@ -60,24 +64,49 @@ const Collections = () => {
           alignOrigin: [0.5, 0.5],
         },
         ease: "none",
-        keyframes: [
-          { progress: 0, color: "blue" },
-          { progress: 0.25, color: "red" },
-          { progress: 0.5, color: "green" },
-          { progress: 0.75, color: "yellow" },
-          { progress: 1, color: "purple" },
-        ],
-        onUpdate: () => {
-          console.log("Progress:", sphereTl.progress());
-          if (sphereTl.progressedKeyframes && sphereTl.progressedKeyframes[0]) {
-            console.log("Color:", sphereTl.progressedKeyframes[0].color);
-            sphereColor.style.fill = sphereTl.progressedKeyframes[0].color;
-          }
-          // if(sphereColor){
-          //   sphereColor.style.fill = "blue";
-          // }
-        },
+        
       });
+      
+      const sphereColorTl1 = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: sphereAnimTrig,
+          scrub: .5,
+          start: "-30% top",
+          end: "100% top",
+          markers: true, 
+        },
+      })
+      .to(sphereAnim, { scale: 3/4 }, 0).to(sphereColor, { fill: "#F9F7B2" }, 0).to(sphereColor1, { fill: "#EFAA86" }, 0).to(sphereColor2, { fill: "#DDFAEE" }, 0).to(sphereColor3, { fill: "#F4DACB" }, 0);
+
+      const sphereColorTl2 = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: sphereAnimTrig,
+          scrub: .5,
+          start: "100% top",
+          end: "220% top",
+          markers: true, 
+        },
+      })
+      .to(sphereColor, { fill: "#F9BEB2" }, 0).to(sphereColor1, { fill: "#EF9786" }, 0).to(sphereColor2, { fill: "#F8BDB1" }, 0).to(sphereColor3, { fill: "#F8BDB1" }, 0);
+
+      const sphereColorTl3 = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: sphereAnimTrig,
+          scrub: .5,
+          start: "220% top",
+          end: "290% top",
+          markers: true, 
+        },
+      })
+      .to(sphereColor, { fill: "#B2F9C6" }, 0).to(sphereColor1, { fill: "#F2F9AC" }, 0).to(sphereColor2, { fill: "#DDFAF0" }, 0).to(sphereColor3, { fill: "#CBF2F4" }, 0);
+      
+      
+      // .to(sphereColor, { fill: "#F9F7B2", progress: 0.1 }, 0).to(sphereColor2, { fill: "#EFAA86", progress: 0.1 });
+      // .to(sphereColor, { fill: "#F9BEB2", progress: 0.3 }, 0).to(sphereColor2, { fill: "#EF9786", progress: 0.3 }, 0);
+      
   }, []);
 
   return (
@@ -94,10 +123,10 @@ const Collections = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <g clip-path="url(#clip0_170_2428)">
-              <rect width="253.977" height="260" rx="126.988" fill="#F9B2E0" />
+              <rect width="253.977" height="260" rx="126.988" className="sphere-color" fill="#F9B2E0" />
               <g filter="url(#filter0_f_170_2428)">
                 <ellipse
-                  className="sphere-color"
+                  className="sphere-color1"
                   cx="121.569"
                   cy="112.976"
                   rx="132.409"
@@ -107,6 +136,7 @@ const Collections = () => {
               </g>
               <g opacity="0.7" filter="url(#filter1_f_170_2428)">
                 <ellipse
+                className="sphere-color2"
                   cx="102.209"
                   cy="80.4759"
                   rx="75.8833"
@@ -116,6 +146,7 @@ const Collections = () => {
               </g>
               <g filter="url(#filter2_f_170_2428)">
                 <ellipse
+                className="sphere-color3"
                   cx="36.1094"
                   cy="22.0804"
                   rx="36.1094"

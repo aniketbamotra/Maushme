@@ -54,7 +54,6 @@ const Collections = () => {
           scrub: .5,
           start: "-30% top",
           end: "290% top",
-          markers: true, 
         },
       })
       .to(sphereAnim, {
@@ -74,7 +73,6 @@ const Collections = () => {
           scrub: .5,
           start: "-30% top",
           end: "100% top",
-          markers: true, 
         },
       })
       .to(sphereAnim, { scale: 3/4 }, 0).to(sphereColor, { fill: "#F9F7B2" }, 0).to(sphereColor1, { fill: "#EFAA86" }, 0).to(sphereColor2, { fill: "#DDFAEE" }, 0).to(sphereColor3, { fill: "#F4DACB" }, 0);
@@ -85,8 +83,7 @@ const Collections = () => {
           trigger: sphereAnimTrig,
           scrub: .5,
           start: "100% top",
-          end: "220% top",
-          markers: true, 
+          end: "220% top", 
         },
       })
       .to(sphereColor, { fill: "#F9BEB2" }, 0).to(sphereColor1, { fill: "#EF9786" }, 0).to(sphereColor2, { fill: "#F8BDB1" }, 0).to(sphereColor3, { fill: "#F8BDB1" }, 0);
@@ -98,7 +95,6 @@ const Collections = () => {
           scrub: .5,
           start: "220% top",
           end: "290% top",
-          markers: true, 
         },
       })
       .to(sphereColor, { fill: "#B2F9C6" }, 0).to(sphereColor1, { fill: "#F2F9AC" }, 0).to(sphereColor2, { fill: "#DDFAF0" }, 0).to(sphereColor3, { fill: "#CBF2F4" }, 0);

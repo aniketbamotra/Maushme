@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import candle from "../images/candle.png";
+import candleimg from "../images/candle.png";
 import wSphere from "../images/white-sphere.png";
 import oSphere from "../images/orange-sphere.png";
 import bSphere from "../images/blue-sphere.png";
-import reed from "../images/reeddiffuser.png";
+import reedImg from "../images/reeddiffuser.png";
 import panel1 from "../images/anim-panel-1.png";
 import panel2 from "../images/anim-panel-2.png";
 import { gsap } from "gsap";
@@ -31,7 +31,7 @@ const AnimPanel1 = () => {
           scrollTrigger: {
             trigger: slide,
             start: () => (i ? "top bottom" : "top top"),
-            end: "bottom top",
+            end: 'bottom top',
             scrub: 0.05,
             invalidateOnRefresh: true,
           },
@@ -50,7 +50,7 @@ const AnimPanel1 = () => {
       tl.fromTo(
         content,
         {
-          y: () => (i ? window.innerHeight * -getRatio(slide) * 2 : 0),
+          y: () => (i ? window.innerHeight * -getRatio(slide) : window.innerHeight * -getRatio(slide) / 4 ),
         },
         {
           y: () => window.innerHeight * getRatio(slide) * 2,
@@ -119,11 +119,11 @@ const AnimPanel1 = () => {
       </div>
       <section class="slides flex flex-col w-full relative z-10">
         <ul class="list flex flex-col w-full">
-          <li class="slide slide1 w-screen h-screen relative overflow-hidden">
+          <li class="slide slide1 w-screen h-screen relative overflow-hidden pt-80">
             <div class="background background1 flex justify-center items-center absolute w-screen h-screen will-change-transform bg-white"></div>
             <div class="content content1 flex justify-center pt-36 pb-28 items-center overflow-hidden text-center w-full relative text-white">
               <div className="">
-                <img src={candle} alt="candle" className=" relative z-0" />
+                <img src={candleimg} alt="candle" className=" relative z-0" />
                 <img
                   src={wSphere}
                   alt="sphere"
@@ -140,7 +140,7 @@ const AnimPanel1 = () => {
           <li class="slide slide2 w-screen h-screen relative overflow-hidden">
             <div class="background flex justify-center items-center absolute w-screen h-screen will-change-transform bg-black"></div>
             <div class="content pb-24 flex-col items-center flex justify-center overflow-hidden text-center w-full relative text-white">
-              <img src={reed} alt="candle" className="reed " />
+              <img src={reedImg} alt="candle" className="reed " />
               <img
                 src={oSphere}
                 alt="sphere"

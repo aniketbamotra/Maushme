@@ -8,11 +8,19 @@ const Topbar = () => {
             <img src={DarkLogo} alt="" srcset="" />
         </div>
         <div className="menu-list">
-            <ul className='flex gap-9 text-xl body'>
-                <li>Shop</li>
-                <li>Collections</li>
-                <li>Giftings</li>
-                <li>About Us</li>
+            <ul className='flex gap-9 text-base body'>
+                <li><a href="/">Home</a></li>
+                <li><a href="https://maushme.shop/">Shop</a></li>
+                <li><a href="/Collections">Collections</a></li>
+                <li><a href="https://maushme.shop/?page_id=6773">Giftings</a></li>
+                <li><a href="https://maushme.shop/?page_id=6792">About Us</a></li>
+            </ul>
+        </div>
+        <div className="top-icon">
+        <ul className='flex gap-9 text-base body'>
+                <li>Account</li>
+                <li>Wishlist</li>
+                <li>Cart</li>
             </ul>
         </div>
     </div>

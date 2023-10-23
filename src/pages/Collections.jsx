@@ -9,47 +9,207 @@ import CollSec2 from "../images/collSection2.png";
 import CollSec3 from "../images/collSection3.png";
 import Topbar from "../components/Topbar";
 import { gsap } from "gsap";
-    
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
 const Collections = () => {
-
   useEffect(() => {
     if (!gsap || !ScrollTrigger) return;
 
     const img1 = document.querySelector(".coll-img-1");
-    const img2 = document.querySelector(".coll-img-2");
     const img3 = document.querySelector(".coll-img-3");
     const img4 = document.querySelector(".coll-img-4");
-    const img5 = document.querySelector(".coll-img-5");
     const collHero = document.querySelector(".collection-hero-section");
 
-        const  tl = gsap.timeline({
-                scrollTrigger: {
-                  trigger: collHero,
-                  start: "top top",
-                  end: "center top",
-                  scrub: true,
-                  invalidateOnRefresh: true,
-                }
-              });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: collHero,
+        start: "top top",
+        end: "center top",
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    });
 
-              tl.to(img1, {y: '-300px', ease: 'none',});
-              tl.to(img3, {y: '-200px', ease: 'none',}, 0);
-              tl.to(img4, {y: '100px', ease: 'none',}, 0);
+    tl.to(img1, { y: "-300px", ease: "none" });
+    tl.to(img3, { y: "-200px", ease: "none" }, 0);
+    tl.to(img4, { y: "100px", ease: "none" }, 0);
 
-  
-    
-  }, [])
-  
+    const sphereAnimTrig = document.querySelector(".sphere-ani-container");
+    const sphereAnim = document.querySelector(".ani-sphere");
+    const sphereAnimPath = document.querySelector(".ani-path");
+    const sphereColor = document.querySelector(".sphere-color");
+
+    const sphereTl = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: sphereAnimTrig,
+          scrub: true,
+          start: "-30% top",
+          end: "290% top",
+          markers: true,
+        },
+      })
+      .to(sphereAnim, {
+        motionPath: {
+          path: sphereAnimPath,
+          align: sphereAnimPath,
+          alignOrigin: [0.5, 0.5],
+        },
+        ease: "none",
+        keyframes: [
+          { progress: 0, color: "blue" },
+          { progress: 0.25, color: "red" },
+          { progress: 0.5, color: "green" },
+          { progress: 0.75, color: "yellow" },
+          { progress: 1, color: "purple" },
+        ],
+        onUpdate: () => {
+          console.log("Progress:", sphereTl.progress());
+          if (sphereTl.progressedKeyframes && sphereTl.progressedKeyframes[0]) {
+            console.log("Color:", sphereTl.progressedKeyframes[0].color);
+            sphereColor.style.fill = sphereTl.progressedKeyframes[0].color;
+          }
+          // if(sphereColor){
+          //   sphereColor.style.fill = "blue";
+          // }
+        },
+      });
+  }, []);
 
   return (
     <div>
       <Topbar />
+      <div className="sphere-ani-container absolute -z-10 top-1/4 left-1/4 h-full">
+        <div className="ani-sphere-wrapper relative top-1/4 left-1/4 -z-10 ">
+          <svg
+            className="ani-sphere"
+            width="254"
+            height="260"
+            viewBox="0 0 254 260"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_170_2428)">
+              <rect width="253.977" height="260" rx="126.988" fill="#F9B2E0" />
+              <g filter="url(#filter0_f_170_2428)">
+                <ellipse
+                  className="sphere-color"
+                  cx="121.569"
+                  cy="112.976"
+                  rx="132.409"
+                  ry="133.095"
+                  fill="#C3B3D9"
+                />
+              </g>
+              <g opacity="0.7" filter="url(#filter1_f_170_2428)">
+                <ellipse
+                  cx="102.209"
+                  cy="80.4759"
+                  rx="75.8833"
+                  ry="75.8333"
+                  fill="#E7F7FE"
+                />
+              </g>
+              <g filter="url(#filter2_f_170_2428)">
+                <ellipse
+                  cx="36.1094"
+                  cy="22.0804"
+                  rx="36.1094"
+                  ry="22.0804"
+                  transform="matrix(0.981154 -0.193229 0.191881 0.981418 107.939 210.229)"
+                  fill="#F4DACB"
+                />
+              </g>
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_170_2428"
+                x="-70.8398"
+                y="-80.1191"
+                width="384.816"
+                height="386.191"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="30"
+                  result="effect1_foregroundBlur_170_2428"
+                />
+              </filter>
+              <filter
+                id="filter1_f_170_2428"
+                x="-23.6738"
+                y="-45.3574"
+                width="251.768"
+                height="251.666"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="25"
+                  result="effect1_foregroundBlur_170_2428"
+                />
+              </filter>
+              <filter
+                id="filter2_f_170_2428"
+                x="81.9199"
+                y="172.148"
+                width="131.369"
+                height="105.545"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="15"
+                  result="effect1_foregroundBlur_170_2428"
+                />
+              </filter>
+              <clipPath id="clip0_170_2428">
+                <rect width="253.977" height="260" rx="126.988" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <svg
+          className="ani-path-wrapper absolute -z-20 top-0 left-0 opacity-0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1078"
+          height="3480"
+          viewBox="0 0 1078 3480"
+          fill="none"
+        >
+          <path
+            d="M27 1L1077 1417L513 2437L1 3479"
+            stroke="black"
+            className="ani-path"
+          />
+        </svg>
+      </div>
       <div className="collection-hero-section">
         <div className="title flex flex-col justify-center items-center mt-24">
           <h6 className="body">COLLECTIONS</h6>
@@ -61,8 +221,8 @@ const Collections = () => {
           <img src={CollImg5} alt="collection image" className="coll-img-1" />
           <img src={CollImg3} alt="collection image" className="coll-img-2" />
           <img src={CollImg2} alt="collection image" className="coll-img-3" />
-          <img src={CollImg1} alt="collection image"  className="coll-img-4" />
-          <img src={CollImg4} alt="collection image"  className="coll-img-5" />
+          <img src={CollImg1} alt="collection image" className="coll-img-4" />
+          <img src={CollImg4} alt="collection image" className="coll-img-5" />
         </div>
       </div>
       <div className="collection-sections-container">
@@ -101,8 +261,12 @@ const Collections = () => {
               along the Bosporus. Exquisite fine china with 24 carat gold
               highlights.
             </p>
-            <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">REED DIFFUSERS</div>
-            <div className="badge w-max px-2 py-1 mb-8 inline-block">CANDLES</div>
+            <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">
+              REED DIFFUSERS
+            </div>
+            <div className="badge w-max px-2 py-1 mb-8 inline-block">
+              CANDLES
+            </div>
             <a
               href="#"
               className="vcb body font-semibold text-white bg-black block w-max px-6 py-3"
@@ -124,8 +288,12 @@ const Collections = () => {
               along the Bosporus. Exquisite fine china with 24 carat gold
               highlights.
             </p>
-            <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">REED DIFFUSERS</div>
-            <div className="badge w-max px-2 py-1 mb-8 inline-block">CANDLES</div>
+            <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">
+              REED DIFFUSERS
+            </div>
+            <div className="badge w-max px-2 py-1 mb-8 inline-block">
+              CANDLES
+            </div>
             <a
               href="#"
               className="vcb block w-max body font-semibold text-white bg-black px-6 py-3"

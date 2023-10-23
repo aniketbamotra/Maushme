@@ -1,127 +1,162 @@
-import React, { useEffect, useState } from 'react'
-import candle from "../images/candle.png"
-import wSphere from "../images/white-sphere.png"
-import oSphere from "../images/orange-sphere.png"
-import bSphere from "../images/blue-sphere.png"
-import reed from "../images/reeddiffuser.png"
-import panel1 from "../images/anim-panel-1.png"
-import panel2 from "../images/anim-panel-2.png"
+import React, { useEffect, useState } from "react";
+import candle from "../images/candle.png";
+import wSphere from "../images/white-sphere.png";
+import oSphere from "../images/orange-sphere.png";
+import bSphere from "../images/blue-sphere.png";
+import reed from "../images/reeddiffuser.png";
+import panel1 from "../images/anim-panel-1.png";
+import panel2 from "../images/anim-panel-2.png";
 import { gsap } from "gsap";
-    
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import SmoothScrollComp from "./SmoothScrollComp";
 
-
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const AnimPanel1 = () => {
+  useEffect(() => {
+    // Check if ScrollTrigger is available and return if not
+    if (!gsap || !ScrollTrigger) return;
 
-    useEffect(() => {
-        // Check if ScrollTrigger is available and return if not
-        if (!gsap || !ScrollTrigger) return;
-    
+    let container = document.querySelector(".slides"),
+      slides = gsap.utils.toArray(".slide"),
+      getRatio = (el) =>
+        window.innerHeight / (window.innerHeight + el.offsetHeight);
 
-        // let container = document.querySelector(".slides"),
-        // slides = gsap.utils.toArray(".slide"),
-        let getRatio = (el) => window.innerHeight / (window.innerHeight + el.offsetHeight);
-    
-    // slides.forEach((slide, i) => {
-    //   let bg = slide.querySelector(".background"),
-    //       content = slide.querySelector(".content"),
-    //       tl = gsap.timeline({
-    //             scrollTrigger: {
-    //               trigger: slide,
-    //               start: () => i ? "top bottom" : "top top",
-    //               end: "bottom top",
-    //               scrub: true,
-    //               invalidateOnRefresh: true
-    //             }
-    //           });
-    
-// Define the elements
-const ele1 = document.querySelector(".slide1");
-const ele2 = document.querySelector(".slide2");
+    slides.forEach((slide, i) => {
+      let bg = slide.querySelector(".background"),
+        content = slide.querySelector(".content"),
+        tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: slide,
+            start: () => (i ? "top bottom" : "top top"),
+            end: "bottom top",
+            scrub: 0.05,
+            invalidateOnRefresh: true,
+          },
+        });
 
+      tl.fromTo(
+        bg,
+        {
+          y: () => (i ? -window.innerHeight * getRatio(slide) : 0),
+        },
+        {
+          y: () => window.innerHeight * (1 - getRatio(slide)),
+          ease: "none",
+        }
+      );
+      tl.fromTo(
+        content,
+        {
+          y: () => (i ? window.innerHeight * -getRatio(slide) * 2 : 0),
+        },
+        {
+          y: () => window.innerHeight * getRatio(slide) * 2,
+          ease: "none",
+        },
+        0
+      );
+    });
 
-const tl = gsap.timeline();
+    const slide1 = document.querySelector(".slide1"),
+      smallSphere = document.querySelectorAll(".s-sphere"),
+      bigSphere = document.querySelectorAll(".b-sphere");
+    const sphereTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: slide1,
+        start: "top top",
+        end: "100% top",
+        scrub: 0.05,
+        markers: true,
+        invalidateOnRefresh: true,
+      },
+    });
 
-tl.to(ele1, {
-  y: () => -ele1.clientHeight, // Move ele-1 up by its height
-  ease: 'none', // No easing, to match scroll position
-});
+    sphereTl.to(smallSphere, {
+      x: "-400px",
+      ease: "none",
+    });
+    sphereTl.to(
+      bigSphere,
+      {
+        x: "+=400px",
+        ease: "none",
+      },
+      0
+    );
+  }, []);
 
-ScrollTrigger.create({
-  trigger: ele1,
-  start: 'top top',
-  end: () => `+=${ele1.clientHeight}`, // Adjust the value as needed
-  animation: tl,
-  scrub: 1,
-});
-
-// Set ele-2's position to be fixed during the animation
-ScrollTrigger.create({
-  trigger: ele2,
-  start: 'top top',
-  end: 'center top',
-  pin: true,
-  markers: true, // Add markers for debugging (remove in production)
-});
-    
-    //   tl.fromTo(bg, {
-    //       y: () => i ? -window.innerHeight * getRatio(slide) : 0
-    //     }, {
-    //       y: () => window.innerHeight * (1 - getRatio(slide)),
-    //       ease: "none"
-    //     });
-    //   tl.fromTo(content, {
-    //       y: () => i ? window.innerHeight * -getRatio(slide) * 2 : 0
-    //     }, {
-    //       y: () => window.innerHeight * getRatio(slide) * 2,
-    //       ease: "none"
-    //     }, 0);
-
-
-    
-      }, []);
-
-      const img1 = {
-        backgroundImage: 'url(' + panel1 + ')',
-      }
-      const img2 = {
-        backgroundImage: 'url(' + panel2 + ')',
-      }
-      const img3 = {
-        backgroundImage: "url('https://placedog.net/1920?id=3')",
-      }
-      const img4 = {
-        backgroundImage: "url('https://placedog.net/1920?id=4')",
-      }
-      const img5 = {
-        backgroundImage: "url('https://placedog.net/1920?id=5')",
-      }
+  const img1 = {
+    backgroundImage: "url(" + panel1 + ")",
+  };
+  const img2 = {
+    backgroundImage: "url(" + panel2 + ")",
+  };
+  const img3 = {
+    backgroundImage: "url('https://placedog.net/1920?id=3')",
+  };
+  const img4 = {
+    backgroundImage: "url('https://placedog.net/1920?id=4')",
+  };
+  const img5 = {
+    backgroundImage: "url('https://placedog.net/1920?id=5')",
+  };
 
   return (
-    <div className="ani-panel-container col-span-full relative">
-
-<section class="slides">
-    <ul class="list">
-      <li class="slide slide1 absolute w-screen h-screen -z-0">
-        <div class="background w-screen h-screen " style={img1}></div>
-        <div class="content">
-          SLIDE 1
+    <div className="ani-panel-container col-span-full relative mt-20">
+      <div className="column-1 ani-content absolute top-0 left-40 z-10">
+        <div className="circle-ele w-10 h-10 border-2 border-black rounded-full mb-6"></div>
+        <h4 className="body text-2xl font-bold mb-2">Natural scents</h4>
+        <p className="heading text-2xl font-light w-96 mb-10">
+          Shop from our wide range of natural scented candles and give your home
+          freshness of mother earth.
+        </p>
+        <div className="cat-btn p-4 border-2 w-max rounded-full">
+          <h5 className="body text-base">EXPLOR CANDLES</h5>
         </div>
-      </li>
-      <li class="slide slide2 relative w-screen h-screen -z-10">
-        <div class="background w-screen h-screen " style={img2}></div>
-        <div class="content">
-          SLIDE 2
-        </div>
-      </li>
-    </ul>
-  </section>
+      </div>
+      <section class="slides flex flex-col w-full relative z-10">
+        <ul class="list flex flex-col w-full">
+          <li class="slide slide1 w-screen h-screen relative overflow-hidden">
+            <div class="background background1 flex justify-center items-center absolute w-screen h-screen will-change-transform bg-white"></div>
+            <div class="content content1 flex justify-center pt-36 pb-28 items-center overflow-hidden text-center w-full relative text-white">
+              <div className="">
+                <img src={candle} alt="candle" className=" relative z-0" />
+                <img
+                  src={wSphere}
+                  alt="sphere"
+                  className="s-sphere absolute -z-10 top-20 right-1/3 w-60"
+                />
+                <img
+                  src={wSphere}
+                  alt="sphere"
+                  className=" b-sphere absolute -z-10 bottom-0 w-96 left-1/3"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="slide slide2 w-screen h-screen relative overflow-hidden">
+            <div class="background flex justify-center items-center absolute w-screen h-screen will-change-transform bg-black"></div>
+            <div class="content pb-24 flex-col items-center flex justify-center overflow-hidden text-center w-full relative text-white">
+              <img src={reed} alt="candle" className="reed " />
+              <img
+                src={oSphere}
+                alt="sphere"
+                className="s-sphere absolute -z-10 top-20 right-1/3 w-60"
+              />
+              <img
+                src={bSphere}
+                alt="sphere"
+                className="b-sphere absolute -z-10 bottom-0 w-96 left-1/3"
+              />
+            </div>
+          </li>
+        </ul>
+      </section>
 
-
-        {/* <div className="panel-1 panel grid grid-cols-12 h-screen items-center relative py-24">
+      {/* <div className="panel-1 panel grid grid-cols-12 h-screen items-center relative py-24">
             <div className="background bg-white w-screen h-screen absolute top-0 left-0"></div>
           <div className="column-1 ani-content content col-start-2 col-end-5 place-self-start">
             <div className="circle-ele w-10 h-10 border-2 border-black rounded-full mb-6"></div>
@@ -176,8 +211,8 @@ ScrollTrigger.create({
           </div>
 
         </div>         */}
-      </div>
-  )
-}
+    </div>
+  );
+};
 
-export default AnimPanel1
+export default AnimPanel1;

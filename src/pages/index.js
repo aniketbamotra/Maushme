@@ -10,24 +10,21 @@ import comimgImg from "../images/coming.png"
 const IndexPage = () => {
   return (
     <main className="grid grid-cols-12 overflow-hidden">
-      {/* <Topbar /> */}
-      <div className="hero-section col-span-full relative">
-        {/* <video src={heroVid} loop muted className="relative -z-10 h-screen w-screen md:object-cover object-right object-fill" /> */}
-        <img src={comimgImg} alt="bg" className="relative -z-10 h-screen w-screen md:object-cover object-cover" />
-        <div className="z-10 absolute flex flex-col justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <img src={lightLogo} alt="logo" className=" " />
-        <h1 className="hero-text heading md:text-4xl text-3xl  text-white text-center">
-          Coming Soon!
+      <Topbar />
+      <div className="hero-section col-span-full relative h-screen mb-20">
+        <video src={heroVid} autoPlay loop muted className="relative w-screen h-screen object-cover -z-10" />
+        <h1 className="hero-text heading z-10 absolute top-1/4 px-0 2xl:px-36 left-1/2 -translate-x-2/4 text-2xl md:text-4xl xl:text-5xl text-white text-center">
+          Discover our wide range of home décor products crafted with finest
+          materials.
         </h1>
-        </div>
       </div>
-      {/* <h3 className=" col-start-4 col-end-10 px-10 heading text-3xl text-center mb-44">
+      <h3 className=" col-start-2 col-end-12 text-2xl xl:col-start-4 xl:col-end-10 xl:text-4xl heading text-center mb-44">
         Crafted with love and perfection to give your home a touch of nature and
         relaxation.
       </h3>
-      <AnimPanel1 />
+        <AnimPanel1 />
       <Bestsellers />
-      <About /> */}
+      <About />
     </main>
   );
 };

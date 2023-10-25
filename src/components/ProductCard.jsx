@@ -7,11 +7,11 @@ import star from "../images/magic-star.png";
 
 const ProductCard = () => {
   return (
-    <div className="product-cards mb-60 flex justify-between items-center">
+    <div className="product-cards mb-60 flex lg:justify-between justify-around items-center lg:flex-nowrap lg:gap-0 flex-wrap gap-16">
       <div className="card-1 w-max">
-        <img src={prodImg1} alt="prod-img" />
+        <img src={prodImg1} alt="prod-img" className=" 2xl:w-80 xl:w-72 md:w-52 w-72" />
         <div className="flex justify-between">
-          <h5 className="prod-title body text-xl font-bold">
+          <h5 className="prod-title body xl:text-xl text-base font-bold">
             versace dylan blue
           </h5>
           <div className="rating flex justify-center items-center">
@@ -22,14 +22,14 @@ const ProductCard = () => {
         <div className="body text-xs text-blue-800 font-medium">100ML</div>
         <div className="body font-medium text-xs mb-5">for men - cold fragrance - Fern - <br /> grapefruit - wood - bergamot</div>
         <div className="price-wrapper flex justify-between items-center">
-            <h3 className="price body font-semibold text-2xl ">$107.00</h3>
-            <div className="atc-btn body text-base font-medium py-3 px-6 rounded-full">Add To Cart</div>
+            <h3 className="price body font-semibold xl:text-2xl text-base">$107.00</h3>
+            <div className="atc-btn body xl:text-base text-sm font-medium xl:py-3 py-1 xl:px-6 px-3 rounded-full">Add To Cart</div>
         </div>
       </div>
       <div className="card-1 w-max">
-        <img src={prodImg2} alt="prod-img" />
+        <img src={prodImg2} alt="prod-img" className=" 2xl:w-80 xl:w-72 md:w-52 w-72"  />
         <div className="flex justify-between">
-          <h5 className="prod-title body text-xl font-bold">
+          <h5 className="prod-title body xl:text-xl text-base font-bold">
             versace dylan blue
           </h5>
           <div className="rating flex justify-center items-center">
@@ -40,14 +40,14 @@ const ProductCard = () => {
         <div className="body text-xs text-blue-800 font-medium">100ML</div>
         <div className="body font-medium text-xs mb-5">for men - cold fragrance - Fern - <br /> grapefruit - wood - bergamot</div>
         <div className="price-wrapper flex justify-between items-center">
-            <h3 className="price body font-semibold text-2xl ">$107.00</h3>
-            <div className="atc-btn body text-base font-medium py-3 px-6 rounded-full">Add To Cart</div>
+            <h3 className="price body font-semibold xl:text-2xl text-base">$107.00</h3>
+            <div className="atc-btn body xl:text-base text-sm font-medium xl:py-3 py-1 xl:px-6 px-3 rounded-full">Add To Cart</div>
         </div>
       </div>
       <div className="card-1 w-max">
-        <img src={prodImg3} alt="prod-img" />
+        <img src={prodImg3} alt="prod-img" className=" 2xl:w-80 xl:w-72 md:w-52 w-72" />
         <div className="flex justify-between">
-          <h5 className="prod-title body text-xl font-bold">
+          <h5 className="prod-title body xl:text-xl text-base font-bold">
             versace dylan blue
           </h5>
           <div className="rating flex justify-center items-center">
@@ -58,14 +58,14 @@ const ProductCard = () => {
         <div className="body text-xs text-blue-800 font-medium">100ML</div>
         <div className="body font-medium text-xs mb-5">for men - cold fragrance - Fern - <br /> grapefruit - wood - bergamot</div>
         <div className="price-wrapper flex justify-between items-center">
-            <h3 className="price body font-semibold text-2xl ">$107.00</h3>
-            <div className="atc-btn body text-base font-medium py-3 px-6 rounded-full">Add To Cart</div>
+            <h3 className="price body font-semibold xl:text-2xl text-base">$107.00</h3>
+            <div className="atc-btn body xl:text-base text-sm font-medium xl:py-3 py-1 xl:px-6 px-3 rounded-full">Add To Cart</div>
         </div>
       </div>
       <div className="card-1 w-max">
-        <img src={prodImg4} alt="prod-img" />
+        <img src={prodImg4} alt="prod-img" className=" 2xl:w-80 xl:w-72 md:w-52 w-72" />
         <div className="flex justify-between">
-          <h5 className="prod-title body text-xl font-bold">
+          <h5 className="prod-title body xl:text-xl text-base font-bold">
             versace dylan blue
           </h5>
           <div className="rating flex justify-center items-center">
@@ -76,8 +76,8 @@ const ProductCard = () => {
         <div className="body text-xs text-blue-800 font-medium">100ML</div>
         <div className="body font-medium text-xs mb-5">for men - cold fragrance - Fern - <br /> grapefruit - wood - bergamot</div>
         <div className="price-wrapper flex justify-between items-center">
-            <h3 className="price body font-semibold text-2xl ">$107.00</h3>
-            <div className="atc-btn body text-base font-medium py-3 px-6 rounded-full">Add To Cart</div>
+            <h3 className="price body font-semibold xl:text-2xl text-base">$107.00</h3>
+            <div className="atc-btn body xl:text-base text-sm font-medium xl:py-3 py-1 xl:px-6 px-3 rounded-full">Add To Cart</div>
         </div>
       </div>
     </div>

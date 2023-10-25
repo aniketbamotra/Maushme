@@ -69,7 +69,6 @@ const AnimPanel1 = () => {
         start: "top top",
         end: "100% top",
         scrub: 0.05,
-        markers: true,
         invalidateOnRefresh: true,
       },
     });
@@ -106,55 +105,68 @@ const AnimPanel1 = () => {
 
   return (
     <div className="ani-panel-container col-span-full relative mt-20">
-      <div className="column-1 ani-content absolute top-0 left-40 z-10">
-        <div className="circle-ele w-10 h-10 border-2 border-black rounded-full mb-6"></div>
-        <h4 className="body text-2xl font-bold mb-2">Natural scents</h4>
-        <p className="heading text-2xl font-light w-96 mb-10">
+      <div className="column-1 ani-content absolute top-0 xl:left-40 left-10 z-10">
+        <div className="circle-ele xl:w-10 w-5 xl:h-10 h-5 border border-black rounded-full xl:mb-6 mb-4"></div>
+        <h4 className="body xl:text-2xl font-bold mb-2">Natural scents</h4>
+        <p className="heading xl:text-2xl font-light xl:w-96 w-60 xl:mb-10 mb-6">
           Shop from our wide range of natural scented candles and give your home
           freshness of mother earth.
         </p>
-        <div className="cat-btn p-4 border-2 w-max rounded-full">
-          <h5 className="body text-base">EXPLOR CANDLES</h5>
+        <div className="cat-btn xl:p-4 p-2 border w-max rounded-full">
+          <h5 className="body xl:text-base text-xs">EXPLOR CANDLES</h5>
         </div>
       </div>
       <section class="slides flex flex-col w-full relative z-10">
         <ul class="list flex flex-col w-full">
           <li class="slide slide1 w-screen h-screen relative overflow-hidden pt-80">
             <div class="background background1 flex justify-center items-center absolute w-screen h-screen will-change-transform bg-white"></div>
-            <div class="content content1 flex justify-center pt-36 pb-28 items-center overflow-hidden text-center w-full relative text-white">
+            <div class="content content1 flex justify-center 2xl:pt-40  items-center overflow-hidden text-center w-full relative text-white">
               <div className="">
-                <img src={candleimg} alt="candle" className=" relative z-0" />
+                <img src={candleimg} alt="candle" className=" relative z-0 xl:w-80 md:w-60 w-52" />
                 <img
                   src={wSphere}
                   alt="sphere"
-                  className="s-sphere absolute -z-10 top-20 right-1/3 w-60"
+                  className="s-sphere absolute -z-10 top-0 2xl:right-1/3 xl:right-96 lg:right-1/4 md:right-20 -right-20 xl:w-60 w-40"
                 />
                 <img
                   src={wSphere}
                   alt="sphere"
-                  className=" b-sphere absolute -z-10 bottom-0 w-96 left-1/3"
+                  className=" b-sphere absolute -z-10 bottom-0 xl:w-96 w-60 lg:left-1/4 md:left-20 -left-40"
                 />
               </div>
             </div>
           </li>
           <li class="slide slide2 w-screen h-screen relative overflow-hidden">
             <div class="background flex justify-center items-center absolute w-screen h-screen will-change-transform bg-black"></div>
-            <div class="content pb-24 flex-col items-center flex justify-center overflow-hidden text-center w-full relative text-white">
-              <img src={reedImg} alt="candle" className="reed " />
-              <img
-                src={oSphere}
-                alt="sphere"
-                className="s-sphere absolute -z-10 top-20 right-1/3 w-60"
-              />
-              <img
-                src={bSphere}
-                alt="sphere"
-                className="b-sphere absolute -z-10 bottom-0 w-96 left-1/3"
-              />
+            <div class="content content1 flex justify-center xl:-mt-40 -mt-20 items-center overflow-hidden text-center w-full relative text-white">
+              <div className="">
+                <img src={reedImg} alt="candle" className=" relative z-0 xl:w-80 w-60" />
+                <img
+                  src={oSphere}
+                  alt="sphere"
+                  className="s-sphere absolute -z-10 top-0 xl:right-96 lg:right-1/4 md:right-20 -right-20 xl:w-60 w-40 2xl:right-1/3"
+                />
+                <img
+                  src={bSphere}
+                  alt="sphere"
+                  className=" b-sphere absolute -z-10 bottom-0 xl:w-96 w-60 lg:left-1/4 md:left-20 -left-40"
+                />
+              </div>
             </div>
           </li>
         </ul>
       </section>
+      <div className="column-1 ani-content absolute md:top-2/3 top-3/4 xl:left-40 left-10 z-10">
+        <div className="circle-ele xl:w-10 w-5 xl:h-10 h-5 border border-white rounded-full xl:mb-6 mb-4"></div>
+        <h4 className="body xl:text-2xl font-bold text-white mb-2">Natural scents</h4>
+        <p className="heading xl:text-2xl font-light xl:w-96 w-60 xl:mb-10 mb-6 text-white">
+          Shop from our wide range of natural scented candles and give your home
+          freshness of mother earth.
+        </p>
+        <div className="cat-btn xl:p-4 p-2 border w-max rounded-full">
+          <h5 className="body xl:text-base text-xs text-white">EXPLOR CANDLES</h5>
+        </div>
+      </div>
 
       {/* <div className="panel-1 panel grid grid-cols-12 h-screen items-center relative py-24">
             <div className="background bg-white w-screen h-screen absolute top-0 left-0"></div>

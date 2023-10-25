@@ -38,10 +38,51 @@
 
 
 /* Custome css */
+body{
+    overflow-x: hidden;
+}
+
+.mobile-menu{
+    transition: transform .3s ease;
+}
+.mobile-close{
+    transform: translateX(-100vw);
+}
+.mobile-open{
+    transform: translateX(0vw);
+}
+@media screen and (max-width: 800px) {
+    .wide-screen-menu{
+        display: none;
+    }
+    .mobile-menu-trigger{
+        display: block;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+@media screen and (min-width: 800px) {
+    .wide-screen-menu{
+        display: block;
+    }
+    .mobile-menu-trigger{
+        display: none;
+    }
+    .mobile-menu{
+        display: none;
+    }
+}
 
 .hero-text{
-    line-height: 4.5rem;
+    line-height: 2rem;
 }
+@media screen and (min-width: 500px){
+    .hero-text{
+        line-height: 2rem;
+    }
+}
+
 
 .indicator-circle{
     outline: 1px solid;

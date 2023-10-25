@@ -127,9 +127,18 @@ body{
     top: 45%;
 }
 
-.coll-title{
-    padding: 0 35rem;
-    line-height: 96px;
+
+@media (min-width: 1280px) {
+    .coll-title{
+        /* padding: 0 35rem; */
+        line-height: 96px;
+    }    
+}
+@media (min-width: 768px) {
+    .coll-title{
+        /* padding: 0 35rem; */
+        line-height: 64px;
+    }    
 }
 
 .badge{

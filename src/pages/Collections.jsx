@@ -46,12 +46,11 @@ const Collections = () => {
     const sphereColor2 = document.querySelector(".sphere-color2");
     const sphereColor3 = document.querySelector(".sphere-color3");
 
-
     const sphereTl = gsap
       .timeline({
         scrollTrigger: {
           trigger: sphereAnimTrig,
-          scrub: .5,
+          scrub: 0.5,
           start: "-30% top",
           end: "290% top",
         },
@@ -63,52 +62,59 @@ const Collections = () => {
           alignOrigin: [0.5, 0.5],
         },
         ease: "none",
-        
       });
-      
-      const sphereColorTl1 = gsap
+
+    const sphereColorTl1 = gsap
       .timeline({
         scrollTrigger: {
           trigger: sphereAnimTrig,
-          scrub: .5,
+          scrub: 0.5,
           start: "-30% top",
           end: "100% top",
         },
       })
-      .to(sphereAnim, { scale: 3/4 }, 0).to(sphereColor, { fill: "#F9F7B2" }, 0).to(sphereColor1, { fill: "#EFAA86" }, 0).to(sphereColor2, { fill: "#DDFAEE" }, 0).to(sphereColor3, { fill: "#F4DACB" }, 0);
+      .to(sphereAnim, { scale: 3 / 4 }, 0)
+      .to(sphereColor, { fill: "#F9F7B2" }, 0)
+      .to(sphereColor1, { fill: "#EFAA86" }, 0)
+      .to(sphereColor2, { fill: "#DDFAEE" }, 0)
+      .to(sphereColor3, { fill: "#F4DACB" }, 0);
 
-      const sphereColorTl2 = gsap
+    const sphereColorTl2 = gsap
       .timeline({
         scrollTrigger: {
           trigger: sphereAnimTrig,
-          scrub: .5,
+          scrub: 0.5,
           start: "100% top",
-          end: "220% top", 
+          end: "220% top",
         },
       })
-      .to(sphereColor, { fill: "#F9BEB2" }, 0).to(sphereColor1, { fill: "#EF9786" }, 0).to(sphereColor2, { fill: "#F8BDB1" }, 0).to(sphereColor3, { fill: "#F8BDB1" }, 0);
+      .to(sphereColor, { fill: "#F9BEB2" }, 0)
+      .to(sphereColor1, { fill: "#EF9786" }, 0)
+      .to(sphereColor2, { fill: "#F8BDB1" }, 0)
+      .to(sphereColor3, { fill: "#F8BDB1" }, 0);
 
-      const sphereColorTl3 = gsap
+    const sphereColorTl3 = gsap
       .timeline({
         scrollTrigger: {
           trigger: sphereAnimTrig,
-          scrub: .5,
+          scrub: 0.5,
           start: "220% top",
           end: "290% top",
         },
       })
-      .to(sphereColor, { fill: "#B2F9C6" }, 0).to(sphereColor1, { fill: "#F2F9AC" }, 0).to(sphereColor2, { fill: "#DDFAF0" }, 0).to(sphereColor3, { fill: "#CBF2F4" }, 0);
-      
-      
-      // .to(sphereColor, { fill: "#F9F7B2", progress: 0.1 }, 0).to(sphereColor2, { fill: "#EFAA86", progress: 0.1 });
-      // .to(sphereColor, { fill: "#F9BEB2", progress: 0.3 }, 0).to(sphereColor2, { fill: "#EF9786", progress: 0.3 }, 0);
-      
+      .to(sphereColor, { fill: "#B2F9C6" }, 0)
+      .to(sphereColor1, { fill: "#F2F9AC" }, 0)
+      .to(sphereColor2, { fill: "#DDFAF0" }, 0)
+      .to(sphereColor3, { fill: "#CBF2F4" }, 0);
+
+    // .to(sphereColor, { fill: "#F9F7B2", progress: 0.1 }, 0).to(sphereColor2, { fill: "#EFAA86", progress: 0.1 });
+    // .to(sphereColor, { fill: "#F9BEB2", progress: 0.3 }, 0).to(sphereColor2, { fill: "#EF9786", progress: 0.3 }, 0);
   }, []);
 
   return (
     <div>
       <Topbar />
-      <div className="sphere-ani-container absolute -z-10 top-1/4 left-1/4 h-full">
+      {/* <div className="sphere-ani-container absolute -z-10 top-1/4 left-1/4 h-full">
         <div className="ani-sphere-wrapper relative top-1/4 left-1/4 -z-10 ">
           <svg
             className="ani-sphere"
@@ -119,7 +125,13 @@ const Collections = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <g clip-path="url(#clip0_170_2428)">
-              <rect width="253.977" height="260" rx="126.988" className="sphere-color" fill="#F9B2E0" />
+              <rect
+                width="253.977"
+                height="260"
+                rx="126.988"
+                className="sphere-color"
+                fill="#F9B2E0"
+              />
               <g filter="url(#filter0_f_170_2428)">
                 <ellipse
                   className="sphere-color1"
@@ -132,7 +144,7 @@ const Collections = () => {
               </g>
               <g opacity="0.7" filter="url(#filter1_f_170_2428)">
                 <ellipse
-                className="sphere-color2"
+                  className="sphere-color2"
                   cx="102.209"
                   cy="80.4759"
                   rx="75.8833"
@@ -142,7 +154,7 @@ const Collections = () => {
               </g>
               <g filter="url(#filter2_f_170_2428)">
                 <ellipse
-                className="sphere-color3"
+                  className="sphere-color3"
                   cx="36.1094"
                   cy="22.0804"
                   rx="36.1094"
@@ -236,102 +248,97 @@ const Collections = () => {
             className="ani-path"
           />
         </svg>
-      </div>
-      <div className="collection-hero-section">
-        <div className="title flex flex-col justify-center items-center mt-24">
-          <h6 className="body">COLLECTIONS</h6>
-          <h1 className="coll-title heading mt-4 text-7xl text-center">
-            Find the perfect candle for you and your loved ones.
-          </h1>
-        </div>
-        <div className="coll-img-wrapper mt-36 flex justify-between items-center">
-          <img src={CollImg5} alt="collection image" className="coll-img-1" />
-          <img src={CollImg3} alt="collection image" className="coll-img-2" />
-          <img src={CollImg2} alt="collection image" className="coll-img-3" />
-          <img src={CollImg1} alt="collection image" className="coll-img-4" />
-          <img src={CollImg4} alt="collection image" className="coll-img-5" />
-        </div>
-      </div>
-      <div className="collection-sections-container">
-        <div className="coll-section-1 mt-36 flex justify-between">
-          <div className="section-img flex-initial">
-            <img src={CollSec1} alt="collection img" />
-          </div>
-          <div className="section-content flex-1 pl-36">
-            <h6 className="body mb-8">COLLECTION</h6>
-            <h6 className="heading text-7xl mb-8">AN ODE TO EMOTION</h6>
-            <p className="body mb-8 pr-48">
-              A collaboration with artist Rebecca Campbell, the symbolic fantasy
-              of our Pomegranates & Roses collection evokes paradise gardens
-              along the Bosporus. Exquisite fine china with 24 carat gold
-              highlights.
-            </p>
-            <div className="badge w-max px-2 py-1 mb-8">CANDLES</div>
-            <a
-              href="#"
-              className="vcb body font-semibold text-white bg-black px-6 py-3"
-            >
-              View Collection
-            </a>
+      </div> */}
+      <div className="coll-grid grid grid-cols-12 gap-16">
+        <div className="collection-hero-section lg:col-start-4 md:col-start-3 col-start-2 lg:col-end-10 md:col-end-11 col-end-11">
+          <div className="title flex flex-col justify-center items-center mt-24">
+            <h6 className="body">COLLECTIONS</h6>
+            <h1 className="coll-title heading mt-4 xl:text-7xl sm:text-5xl text-3xl text-center">
+              Find the perfect candle for you and your loved ones.
+            </h1>
           </div>
         </div>
-        <div className="coll-section-2 mt-36 flex justify-between">
-          <div className="section-img flex-initial">
-            <img src={CollSec3} alt="collection img" />
+        <div className="coll-img-wrapper mt-36 justify-between items-center col-span-full lg:flex hidden">
+            <img src={CollImg5} alt="collection image" className="coll-img-1" />
+            <img src={CollImg3} alt="collection image" className="coll-img-2 2xl:block hidden" />
+            <img src={CollImg2} alt="collection image" className="coll-img-3 xl:block hidden" />
+            <img src={CollImg1} alt="collection image" className="coll-img-4" />
+            <img src={CollImg4} alt="collection image" className="coll-img-5" />
           </div>
-          <div className="section-content flex-1 pl-36">
-            <h6 className="body mb-8">COLLECTION</h6>
-            <h6 className="heading text-7xl mb-8">Around You</h6>
-            <p className="body mb-8 pr-48">
-              A collaboration with artist Rebecca Campbell, the symbolic fantasy
-              of our Pomegranates & Roses collection evokes paradise gardens
-              along the Bosporus. Exquisite fine china with 24 carat gold
-              highlights.
-            </p>
-            <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">
-              REED DIFFUSERS
+          <div className="section-img flex-initial lg:col-start-1 md:col-start-2 col-start-1 lg:col-end-8 col-end-12 mt-36">
+              <img src={CollSec1} alt="collection img" />
             </div>
-            <div className="badge w-max px-2 py-1 mb-8 inline-block">
-              CANDLES
+            <div className="section-content lg:col-start-8 col-start-2 lg:col-end-13 col-end-12 pr-8 lg:mt-36 mt-4">
+              <h6 className="body xl:mb-8 mb-4">COLLECTION</h6>
+              <h6 className="heading xl:text-7xl text-4xl xl:mb-8 mb-4">AN ODE TO EMOTION</h6>
+              <p className="body xl:mb-8 mb-4">
+                A collaboration with artist Rebecca Campbell, the symbolic
+                fantasy of our Pomegranates & Roses collection evokes paradise
+                gardens along the Bosporus. Exquisite fine china with 24 carat
+                gold highlights.
+              </p>
+              <div className="badge w-max px-2 py-1 mb-8">CANDLES</div>
+              <a
+                href="#"
+                className="vcb body font-semibold text-white bg-black px-6 py-3"
+              >
+                View Collection
+              </a>
             </div>
-            <a
-              href="#"
-              className="vcb body font-semibold text-white bg-black block w-max px-6 py-3"
-            >
-              View Collection
-            </a>
-          </div>
-          <div className="section-img flex-initial">
-            <img src={CollSec2} alt="collection img" />
-          </div>
-        </div>
-        <div className="coll-section-3 mt-36 flex justify-between">
-          <div className="section-content flex-1 pl-36">
-            <h6 className="body mb-8">COLLECTION</h6>
-            <h6 className="heading text-7xl mb-8">A SPLASH OF COURAGE</h6>
-            <p className="body mb-8 pr-48">
-              A collaboration with artist Rebecca Campbell, the symbolic fantasy
-              of our Pomegranates & Roses collection evokes paradise gardens
-              along the Bosporus. Exquisite fine china with 24 carat gold
-              highlights.
-            </p>
-            <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">
-              REED DIFFUSERS
+            <div className="section-img lg:col-start-1 md:col-start-2 col-start-1 lg:col-end-5 col-end-12 mt-36">
+              <img src={CollSec3} alt="collection img" className=" object-cover" />
             </div>
-            <div className="badge w-max px-2 py-1 mb-8 inline-block">
-              CANDLES
+            <div className="section-content lg:col-start-5 col-start-2 lg:col-end-9 col-end-12 lg:mt-36 mt-4">
+              <h6 className="body mb-8">COLLECTION</h6>
+              <h6 className="heading xl:text-7xl text-4xl xl:mb-8 mb-4">Around You</h6>
+              <p className="body mb-8">
+                A collaboration with artist Rebecca Campbell, the symbolic
+                fantasy of our Pomegranates & Roses collection evokes paradise
+                gardens along the Bosporus. Exquisite fine china with 24 carat
+                gold highlights.
+              </p>
+              <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">
+                REED DIFFUSERS
+              </div>
+              <div className="badge w-max px-2 py-1 mb-8 inline-block">
+                CANDLES
+              </div>
+              <a
+                href="#"
+                className="vcb body font-semibold text-white bg-black block w-max px-6 py-3"
+              >
+                View Collection
+              </a>
             </div>
-            <a
-              href="#"
-              className="vcb block w-max body font-semibold text-white bg-black px-6 py-3"
-            >
-              View Collection
-            </a>
-          </div>
-          <div className="section-img flex-initial">
-            <img src={CollSec1} alt="collection img" />
-          </div>
-        </div>
+            <div className="section-img lg:col-start-9 lg:col-end-13 md:col-start-2 col-start-1 col-end-12 place-self-center mt-36">
+              <img src={CollSec2} alt="collection img" className=" object-cover" />
+            </div>
+            <div className="section-content lg:col-start-2 col-start-2 lg:col-end-6 col-end-12 lg:mt-36 mt-4">
+              <h6 className="body mb-8">COLLECTION</h6>
+              <h6 className="heading xl:text-7xl text-4xl xl:mb-8 mb-4">A SPLASH OF COURAGE</h6>
+              <p className="body mb-8">
+                A collaboration with artist Rebecca Campbell, the symbolic
+                fantasy of our Pomegranates & Roses collection evokes paradise
+                gardens along the Bosporus. Exquisite fine china with 24 carat
+                gold highlights.
+              </p>
+              <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">
+                REED DIFFUSERS
+              </div>
+              <div className="badge w-max px-2 py-1 mb-8 inline-block">
+                CANDLES
+              </div>
+              <a
+                href="#"
+                className="vcb block w-max body font-semibold text-white bg-black px-6 py-3"
+              >
+                View Collection
+              </a>
+            </div>
+            <div className="section-img lg:col-start-6 lg:col-end-13 lg:block hidden mt-36">
+              <img src={CollSec1} alt="collection img" />
+            </div>
+
       </div>
     </div>
   );

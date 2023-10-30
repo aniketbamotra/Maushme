@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import DarkLogo from "../images/dark-logo.png";
-import accIcon from "../images/account.png";
-import cartIcon from "../images/cart.png";
-import wishIcon from "../images/wishlist.png";
+import accSvg from "../images/account.svg";
+import cartSvg from "../images/cart.svg";
+import wishSvg from "../images/wishlist.svg";
 import menuIcon from "../images/menu.png";
 
 const Topbar = () => {
@@ -65,9 +65,9 @@ const Topbar = () => {
       </div>
       <div className="top-icon">
         <ul className="flex lg:gap-9 gap-2 text-base body">
-          <li><a href="#"><img src={accIcon} /></a></li>
-          <li><a href="#"><img src={wishIcon} /></a></li>
-          <li><a href=""><img src={cartIcon} /></a></li>
+          <li><a href="#"><img src={accSvg} /></a></li>
+          <li><a href="#"><img src={wishSvg} /></a></li>
+          <li><a href=""><img src={cartSvg} /></a></li>
           <li onClick={mobileMenuToggle} className="mobile-menu-trigger" ><img src={menuIcon} alt="" /></li>
         </ul>
       </div>

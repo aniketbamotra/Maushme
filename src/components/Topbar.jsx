@@ -65,9 +65,9 @@ const Topbar = () => {
       </div>
       <div className="top-icon">
         <ul className="flex lg:gap-9 gap-2 text-base body">
-          <li><a href="#"><img src={accSvg} /></a></li>
-          <li><a href="#"><img src={wishSvg} /></a></li>
-          <li><a href=""><img src={cartSvg} /></a></li>
+          <li><a href="https://maushme.shop/?page_id=9"><img src={accSvg} /></a></li>
+          <li><a href="https://maushme.shop/?page_id=11"><img src={wishSvg} /></a></li>
+          <li><a href="https://maushme.shop/?page_id=6339"><img src={cartSvg} /></a></li>
           <li onClick={mobileMenuToggle} className="mobile-menu-trigger" ><img src={menuIcon} alt="" /></li>
         </ul>
       </div>

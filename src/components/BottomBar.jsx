@@ -11,9 +11,9 @@ const BottomBar = () => {
         <div className="ft-col w-1/2">
             <h4 className="body text-white mb-3 font-semibold lg:text-left text-center">MENU</h4>
           <ul>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">Home</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">Shop</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">Collection</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="/">Home</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/">Shop</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="/Collections">Collection</a></li>
             <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">Gifts</a></li>
             <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">Popular this week</a></li>
             <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">All products</a></li>
@@ -29,8 +29,7 @@ const BottomBar = () => {
         <div className="ft-col w-1/2">
             <h4 className="body text-white mb-3 font-semibold lg:text-left text-center">OUR COMPANY</h4>
           <ul>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">About Us</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">Contact Us</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6792">About Us</a></li>
             <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">Privacy</a></li>
             <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">Return Policy</a></li>
           </ul>

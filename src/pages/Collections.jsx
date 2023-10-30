@@ -12,6 +12,7 @@ import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import BottomBar from "../components/BottomBar";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
@@ -340,6 +341,7 @@ const Collections = () => {
             </div>
 
       </div>
+      <BottomBar />
     </div>
   );
 };

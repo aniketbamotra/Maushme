@@ -5,6 +5,7 @@ import AnimPanel1 from "../components/AnimPanel1";
 import Bestsellers from "../components/Bestsellers";
 import About from "../components/About";
 import SmoothScrollComp from "../components/SmoothScrollComp";
+import BottomBar from "../components/BottomBar";
 
 const Landing = () => {
   return (
@@ -24,6 +25,7 @@ const Landing = () => {
         <AnimPanel1 />
       <Bestsellers />
       <About />
+      <BottomBar />
     </div>
   );
 };

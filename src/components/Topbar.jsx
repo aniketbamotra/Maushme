@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import DarkLogo from "../images/dark-logo.png";
+import accIcon from "../images/account.png";
+import cartIcon from "../images/cart.png";
+import wishIcon from "../images/wishlist.png";
+import menuIcon from "../images/menu.png";
 
 const Topbar = () => {
     const [MenuToggle, setMenuToggle] = useState(false);
@@ -61,10 +65,10 @@ const Topbar = () => {
       </div>
       <div className="top-icon">
         <ul className="flex lg:gap-9 gap-2 text-base body">
-          <li>Account</li>
-          <li>Wishlist</li>
-          <li>Cart</li>
-          <li onClick={mobileMenuToggle} className="mobile-menu-trigger" >Menu</li>
+          <li><a href="#"><img src={accIcon} /></a></li>
+          <li><a href="#"><img src={wishIcon} /></a></li>
+          <li><a href=""><img src={cartIcon} /></a></li>
+          <li onClick={mobileMenuToggle} className="mobile-menu-trigger" ><img src={menuIcon} alt="" /></li>
         </ul>
       </div>
     </div>

@@ -11,7 +11,7 @@ const Bestsellers = () => {
             Here are the bestsellers from <br /> our collection
           </h3>
         </div>
-        <h5 className="view-all-link body font-bold text-base underline"><a href="">View All</a></h5>
+        <h5 className="view-all-link body font-bold text-base underline"><a href="https://maushme.shop/">View All</a></h5>
       </div>
       <div className="product-row">
         <ProductCard />

@@ -113,7 +113,7 @@ const AnimPanel1 = () => {
           freshness of mother earth.
         </p>
         <div className="cat-btn xl:p-4 p-2 border w-max rounded-full">
-          <h5 className="body xl:text-base text-xs"><a href="https://maushme.shop/">EXPLORE CANDLES</a></h5>
+          <h5 className="body xl:text-base text-xs"><a href="https://maushme.shop/?page_id=7003">EXPLORE CANDLES</a></h5>
         </div>
       </div>
       <section class="slides flex flex-col w-full relative z-10">
@@ -163,7 +163,7 @@ const AnimPanel1 = () => {
         Elevate your space with our candles, crafted from ethical ingredients like soy wax and higher essential oil content. 
         </p>
         <div className="cat-btn xl:p-4 p-2 border w-max rounded-full">
-          <h5 className="body xl:text-base text-xs text-white"><a href="https://maushme.shop/">EXPLORE CANDLES</a></h5>
+          <h5 className="body xl:text-base text-xs text-white"><a href="https://maushme.shop/?page_id=7003">EXPLORE CANDLES</a></h5>
         </div>
       </div>
 

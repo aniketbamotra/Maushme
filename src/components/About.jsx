@@ -1,10 +1,12 @@
 import React from "react";
 import creatorBg from "../images/creator-bg.png";
 import creator from "../images/creator.png";
+import creatorImg from "../images/creator.jpg";
 import review1 from "../images/review1.png";
 import review2 from "../images/review2.png";
 import rating from "../images/Review Star's.png";
 import subs from "../images/subs-bg.png";
+import staticBg from "../images/static-bg.jpg"
 
 const About = () => {
   return (
@@ -34,17 +36,17 @@ const About = () => {
           </div>
         </div>
         <div className="img-wrapper flex-1 relative">
-          <img src={creatorBg} alt="creatorBg" className=" xl:pl-28 md:pl-16" />
+          <img src={staticBg} alt="creatorBg" className="blur-sm xl:pl-28 md:pl-16" />
           <img
-            src={creator}
+            src={creatorImg}
             alt="creator"
-            className="absolute creator-img 2xl:w-80 xl:w-64 lg:w-48 sm:w-80 w-48"
+            className="absolute creator-img 2xl:w-72 xl:w-64 lg:w-48 sm:w-80 w-48"
           />
           <h5 className="body 2xl:pl-80 xl:pl-64 lg:pl-52 sm:pl-80 pl-52 text-sm md:mt-14 mt-6">
             OUR CREATOR
           </h5>
           <h3 className="body 2xl:pl-80 xl:pl-64 lg:pl-52 sm:pl-80 pl-52 font-bold md:text-xl text-base">
-            ANNA SMITH
+            GUNEET VIRDI
           </h3>
         </div>
       </div>

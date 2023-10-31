@@ -113,7 +113,7 @@ const AnimPanel1 = () => {
           freshness of mother earth.
         </p>
         <div className="cat-btn xl:p-4 p-2 border w-max rounded-full">
-          <h5 className="body xl:text-base text-xs">EXPLOR CANDLES</h5>
+          <h5 className="body xl:text-base text-xs"><a href="https://maushme.shop/">EXPLORE CANDLES</a></h5>
         </div>
       </div>
       <section class="slides flex flex-col w-full relative z-10">
@@ -158,13 +158,12 @@ const AnimPanel1 = () => {
       </section>
       <div className="column-1 ani-content absolute md:top-2/3 top-3/4 xl:left-40 left-10 z-10">
         <div className="circle-ele xl:w-10 w-5 xl:h-10 h-5 border border-white rounded-full xl:mb-6 mb-4"></div>
-        <h4 className="body xl:text-2xl font-bold text-white mb-2">Natural scents</h4>
+        <h4 className="body xl:text-2xl font-bold text-white mb-2">Ethical Ingredients</h4>
         <p className="heading xl:text-2xl font-light xl:w-96 w-60 xl:mb-10 mb-6 text-white">
-          Shop from our wide range of natural scented candles and give your home
-          freshness of mother earth.
+        Elevate your space with our candles, crafted from ethical ingredients like soy wax and higher essential oil content. 
         </p>
         <div className="cat-btn xl:p-4 p-2 border w-max rounded-full">
-          <h5 className="body xl:text-base text-xs text-white">EXPLOR CANDLES</h5>
+          <h5 className="body xl:text-base text-xs text-white"><a href="https://maushme.shop/">EXPLORE CANDLES</a></h5>
         </div>
       </div>
 

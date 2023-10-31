@@ -255,7 +255,7 @@ const Collections = () => {
           <div className="title flex flex-col justify-center items-center mt-24">
             <h6 className="body">COLLECTIONS</h6>
             <h1 className="coll-title heading mt-4 xl:text-7xl sm:text-5xl text-3xl text-center">
-              Find the perfect candle for you and your loved ones.
+            An assortment of the Extraordinary
             </h1>
           </div>
         </div>
@@ -266,7 +266,7 @@ const Collections = () => {
             <img src={CollImg1} alt="collection image" className="coll-img-4" />
             <img src={CollImg4} alt="collection image" className="coll-img-5" />
           </div>
-          <div className="section-img flex-initial lg:col-start-1 md:col-start-2 col-start-1 lg:col-end-8 col-end-12 mt-36">
+          {/* <div className="section-img flex-initial lg:col-start-1 md:col-start-2 col-start-1 lg:col-end-8 col-end-12 mt-36">
               <img src={CollSec1} alt="collection img" />
             </div>
             <div className="section-content lg:col-start-8 col-start-2 lg:col-end-13 col-end-12 pr-8 lg:mt-36 mt-4">
@@ -285,7 +285,7 @@ const Collections = () => {
               >
                 View Collection
               </a>
-            </div>
+            </div> */}
             <div className="section-img lg:col-start-1 md:col-start-2 col-start-1 lg:col-end-5 col-end-12 mt-36">
               <img src={CollSec3} alt="collection img" className=" object-cover" />
             </div>
@@ -293,10 +293,7 @@ const Collections = () => {
               <h6 className="body mb-8">COLLECTION</h6>
               <h6 className="heading xl:text-7xl text-4xl xl:mb-8 mb-4">Around You</h6>
               <p className="body mb-8">
-                A collaboration with artist Rebecca Campbell, the symbolic
-                fantasy of our Pomegranates & Roses collection evokes paradise
-                gardens along the Bosporus. Exquisite fine china with 24 carat
-                gold highlights.
+              Evoke desired sensations with 'Around You'. Experience nature's embrace and destiny's comfort. This collection transforms your space into a rejuvenating sanctuary, enhancing your self-care journey. 
               </p>
               <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">
                 REED DIFFUSERS
@@ -314,7 +311,7 @@ const Collections = () => {
             <div className="section-img lg:col-start-9 lg:col-end-13 md:col-start-2 col-start-1 col-end-12 place-self-center mt-36">
               <img src={CollSec2} alt="collection img" className=" object-cover" />
             </div>
-            <div className="section-content lg:col-start-2 col-start-2 lg:col-end-6 col-end-12 lg:mt-36 mt-4">
+            {/* <div className="section-content lg:col-start-2 col-start-2 lg:col-end-6 col-end-12 lg:mt-36 mt-4">
               <h6 className="body mb-8">COLLECTION</h6>
               <h6 className="heading xl:text-7xl text-4xl xl:mb-8 mb-4">A SPLASH OF COURAGE</h6>
               <p className="body mb-8">
@@ -338,7 +335,7 @@ const Collections = () => {
             </div>
             <div className="section-img lg:col-start-6 lg:col-end-13 lg:block hidden mt-36">
               <img src={CollSec1} alt="collection img" />
-            </div>
+            </div> */}
 
       </div>
       <BottomBar />

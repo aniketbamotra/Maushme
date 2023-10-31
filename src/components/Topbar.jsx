@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DarkLogo from "../images/dark-logo.png";
+import dLogo from "../images/logo-svg.svg"
 import DarkLogoSvg from "../images/logoDark.svg";
 import accSvg from "../images/account.svg";
 import cartSvg from "../images/cart.svg";
@@ -18,7 +18,7 @@ const Topbar = () => {
   return (
     <div className="flex justify-between items-center lg:px-14 lg:py-4 px-4 py-4 col-span-full">
       <div className="logo-wrapper min-w-fit">
-        <img src={DarkLogoSvg} alt="" srcset="" className="w-40" />
+        <img src={dLogo} alt="" srcset="" className="w-40" />
       </div>
       <div className="menu-list wide-screen-menu ">
         <ul className="flex gap-9 text-base body">

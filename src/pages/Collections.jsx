@@ -7,6 +7,8 @@ import CollImg5 from "../images/collection5.png";
 import CollSec1 from "../images/collSection1.png";
 import CollSec2 from "../images/collSection2.png";
 import CollSec3 from "../images/collSection3.png";
+import oriImg1 from "../images/colImg1.jpg";
+import oriImg2 from "../images/colImg2.jpg";
 import Topbar from "../components/Topbar";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -250,8 +252,8 @@ const Collections = () => {
           />
         </svg>
       </div> */}
-      <div className="coll-grid grid grid-cols-12 gap-16">
-        <div className="collection-hero-section lg:col-start-4 md:col-start-3 col-start-2 lg:col-end-10 md:col-end-11 col-end-11">
+      <div className="coll-grid grid grid-cols-4 gap-16">
+        <div className="collection-hero-section  col-span-full">
           <div className="title flex flex-col justify-center items-center mt-24">
             <h6 className="body">COLLECTIONS</h6>
             <h1 className="coll-title heading mt-4 xl:text-7xl sm:text-5xl text-3xl text-center">
@@ -294,10 +296,10 @@ const Collections = () => {
                 View Collection
               </a>
             </div> */}
-        <div className="section-img lg:col-start-1 md:col-start-2 col-start-1 lg:col-end-5 col-end-12 mt-36">
-          <img src={CollSec3} alt="collection img" className=" object-cover" />
+        <div className="section-img col-span-full md:col-span-2 lg:col-span-1 mt-36">
+          <img src={oriImg2} alt="collection img" className=" object-cover w-full" />
         </div>
-        <div className="section-content lg:col-start-5 col-start-2 lg:col-end-9 col-end-12 lg:mt-36 mt-4">
+        <div className="section-content col-span-full md:col-span-2 px-4 lg:mt-36 mt-4">
           <h6 className="body mb-8">COLLECTION</h6>
           <h6 className="heading xl:text-7xl text-4xl xl:mb-8 mb-4">
             Around You
@@ -308,18 +310,18 @@ const Collections = () => {
             into a rejuvenating sanctuary, enhancing your self-care journey.
           </p>
           <div className="badge w-max px-2 py-1 mb-8 inline-block mr-10">
-            REED DIFFUSERS
+            <a href="https://maushme.shop/?page_id=7009">REED DIFFUSERS</a>
           </div>
-          <div className="badge w-max px-2 py-1 mb-8 inline-block">CANDLES</div>
+          <div className="badge w-max px-2 py-1 mb-8 inline-block"><a href="https://maushme.shop/?page_id=7003">CANDLES</a></div>
           <a
-            href="#"
+            href="https://maushme.shop/"
             className="vcb body font-semibold text-white bg-black block w-max px-6 py-3"
           >
             View Collection
           </a>
         </div>
-        <div className="section-img lg:col-start-9 lg:col-end-13 md:col-start-2 col-start-1 col-end-12 place-self-center mt-36">
-          <img src={CollSec2} alt="collection img" className=" object-cover" />
+        <div className="section-img col-span-full md:col-span-2 lg:col-span-1 lg:mt-36">
+          <img src={oriImg1} alt="collection img" className=" object-cover w-full md:w-auto" />
         </div>
         {/* <div className="section-content lg:col-start-2 col-start-2 lg:col-end-6 col-end-12 lg:mt-36 mt-4">
               <h6 className="body mb-8">COLLECTION</h6>

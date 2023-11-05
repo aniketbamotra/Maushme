@@ -1,6 +1,5 @@
 import React from "react";
 import Topbar from "../components/Topbar";
-import heroVid from "../static/video/hero-vid.mp4";
 import heroVideo from "../static/video/hero-video.mp4";
 import AnimPanel1 from "../components/AnimPanel1";
 import Bestsellers from "../components/Bestsellers";

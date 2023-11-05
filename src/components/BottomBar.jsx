@@ -13,8 +13,8 @@ const BottomBar = () => {
         <div className="social-wrapper">
         <h4 className="body text-white mb-3 font-semibold text-center">SOCIAL</h4>
           <ul className="flex">
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#"><img src={fb} alt="" /></a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#"><img src={insta} alt="" /></a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://www.facebook.com/Maushmeee?mibextid=LQQJ4d"><img src={fb} alt="" /></a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://www.instagram.com/maushme/"><img src={insta} alt="" /></a></li>
           </ul>
         </div>
       <div className="footer-links-container flex xl:gap-16 gap-8 lg:flex-nowrap flex-wrap justify-center">
@@ -29,21 +29,21 @@ const BottomBar = () => {
         <div className="ft-col w-1/2">
             <h4 className="body text-white mb-3 font-semibold lg:text-left text-center">SUPPORT</h4>
           <ul>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">ABOUT US</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">CONTACT US</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">BULK ORDER</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6792">ABOUT US</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6908">CONTACT US</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=7024">BULK ORDER</a></li>
           </ul>
         </div>
         <div className="ft-col w-1/2">
             <h4 className="body text-white mb-3 font-semibold lg:text-left text-center">POLICIES</h4>
           <ul>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">PRIVACY POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">SHIPPING POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">RETURN POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">REFUND POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">DISCLAIMER POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">CANCELLATION POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="#">TERMS OF USE</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6913">PRIVACY POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6919">SHIPPING POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6924">RETURN POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6929">REFUND POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6934">DISCLAIMER POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6939">CANCELLATION POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6944">TERMS OF USE</a></li>
           </ul>
         </div>
       </div>

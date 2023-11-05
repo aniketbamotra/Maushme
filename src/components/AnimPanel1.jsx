@@ -162,8 +162,8 @@ const AnimPanel1 = () => {
         <p className="heading xl:text-2xl font-light xl:w-96 w-60 xl:mb-10 mb-6 text-white">
         Elevate your space with our candles, crafted from ethical ingredients like soy wax and higher essential oil content. 
         </p>
-        <div className="cat-btn xl:p-4 p-2 border w-max rounded-full">
-          <h5 className="body xl:text-base text-xs text-white"><a href="https://maushme.shop/?page_id=7003">EXPLORE CANDLES</a></h5>
+        <div className="cat-btn xl:p-4 p-2 border w-max rounded-full bg-white">
+          <h5 className="body xl:text-base text-xs text-black "><a href="https://maushme.shop/?page_id=7003">EXPLORE CANDLES</a></h5>
         </div>
       </div>
 

@@ -4,6 +4,8 @@ import wSphere from "../images/white-sphere.png";
 import oSphere from "../images/orange-sphere.png";
 import bSphere from "../images/blue-sphere.png";
 import reedImg from "../images/reeddiffuser.png";
+import AnimeImg1 from "../images/anime-img1.png";
+import AnimeImg2 from "../images/anime-img2.png";
 import panel1 from "../images/anim-panel-1.png";
 import panel2 from "../images/anim-panel-2.png";
 import { gsap } from "gsap";
@@ -50,7 +52,7 @@ const AnimPanel1 = () => {
       tl.fromTo(
         content,
         {
-          y: () => (i ? window.innerHeight * -getRatio(slide) : window.innerHeight * -getRatio(slide) / 4 ),
+          y: () => (i ? window.innerHeight * -getRatio(slide) * 2 : window.innerHeight * -getRatio(slide) / 2 ),
         },
         {
           y: () => window.innerHeight * getRatio(slide) * 2,
@@ -118,11 +120,11 @@ const AnimPanel1 = () => {
       </div>
       <section class="slides flex flex-col w-full relative z-10">
         <ul class="list flex flex-col w-full">
-          <li class="slide slide1 w-screen h-screen relative overflow-hidden pt-80">
+          <li class="slide slide1 w-screen h-screen relative overflow-hidden pt-72">
             <div class="background background1 flex justify-center items-center absolute w-screen h-screen will-change-transform bg-white"></div>
             <div class="content content1 flex justify-center 2xl:pt-40  items-center overflow-hidden text-center w-full relative text-white">
               <div className="">
-                <img src={candleimg} alt="candle" className=" relative z-0 xl:w-80 md:w-60 w-52" />
+                <img src={AnimeImg2} alt="candle" className=" relative z-0 xl:w-96 md:w-60 w-68" />
                 <img
                   src={wSphere}
                   alt="sphere"
@@ -138,9 +140,9 @@ const AnimPanel1 = () => {
           </li>
           <li class="slide slide2 w-screen h-screen relative overflow-hidden">
             <div class="background flex justify-center items-center absolute w-screen h-screen will-change-transform bg-black"></div>
-            <div class="content content1 flex justify-center xl:-mt-40 -mt-20 items-center overflow-hidden text-center w-full relative text-white">
+            <div class="content content1 flex justify-center xl:-mt-40 mt-20 items-center overflow-hidden text-center w-full relative text-white">
               <div className="">
-                <img src={reedImg} alt="candle" className=" relative z-0 xl:w-80 w-60" />
+                <img src={AnimeImg1} alt="candle" className=" relative z-0 xl:w-96 w-68" />
                 <img
                   src={oSphere}
                   alt="sphere"

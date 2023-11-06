@@ -140,7 +140,7 @@ const AnimPanel1 = () => {
           </li>
           <li class="slide slide2 w-screen h-screen relative overflow-hidden">
             <div class="background flex justify-center items-center absolute w-screen h-screen will-change-transform bg-black"></div>
-            <div class="content content1 flex justify-center xl:-mt-40 mt-20 items-center overflow-hidden text-center w-full relative text-white">
+            <div class="content content1 flex justify-center mt-20 items-center overflow-hidden text-center w-full relative text-white">
               <div className="">
                 <img src={AnimeImg1} alt="candle" className=" relative z-0 xl:w-96 w-68" />
                 <img

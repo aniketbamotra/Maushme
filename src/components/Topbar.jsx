@@ -32,7 +32,7 @@ const Topbar = () => {
             <a href="/Collections">Collections</a>
           </li>
           <li>
-            <a href="https://maushme.shop/?page_id=6773">Giftings</a>
+            <a href="https://maushme.shop/?page_id=6773">Combos</a>
           </li>
           <li>
             <a href="https://maushme.shop/?page_id=6792">About Us</a>

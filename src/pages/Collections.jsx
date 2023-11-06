@@ -4,6 +4,11 @@ import CollImg2 from "../images/collection2.png";
 import CollImg3 from "../images/collection3.png";
 import CollImg4 from "../images/collection4.png";
 import CollImg5 from "../images/collection5.png";
+import CollHeroImg1 from "../images/collection-hero-img1.jpg";
+import CollHeroImg2 from "../images/collection-hero-img2.jpg";
+import CollHeroImg3 from "../images/collection-hero-img3.jpg";
+import CollHeroImg4 from "../images/collection-hero-img4.jpg";
+import CollHeroImg5 from "../images/collection-hero-img5.jpg";
 import CollSec1 from "../images/collSection1.png";
 import CollSec2 from "../images/collSection2.png";
 import CollSec3 from "../images/collSection3.png";
@@ -30,9 +35,9 @@ const Collections = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: collHero,
-        start: "top top",
-        end: "center top",
-        scrub: true,
+        start: "-20% top",
+        end: "80% top",
+        scrub: 0.5,
         invalidateOnRefresh: true,
       },
     });
@@ -262,19 +267,19 @@ const Collections = () => {
           </div>
         </div>
         <div className="coll-img-wrapper mt-36 justify-between items-center col-span-full lg:flex hidden">
-          <img src={CollImg5} alt="collection image" className="coll-img-1" />
+          <img src={CollHeroImg5} alt="collection image" className="coll-img-1 w-96" />
           <img
-            src={CollImg3}
+            src={CollHeroImg3}
             alt="collection image"
-            className="coll-img-2 2xl:block hidden"
+            className="coll-img-2 2xl:block hidden w-96"
           />
           <img
-            src={CollImg2}
+            src={CollHeroImg2}
             alt="collection image"
-            className="coll-img-3 xl:block hidden"
+            className="coll-img-3 xl:block hidden w-96"
           />
-          <img src={CollImg1} alt="collection image" className="coll-img-4" />
-          <img src={CollImg4} alt="collection image" className="coll-img-5" />
+          <img src={CollHeroImg1} alt="collection image" className="coll-img-4 w-96" />
+          <img src={CollHeroImg4} alt="collection image" className="coll-img-5 w-96" />
         </div>
         {/* <div className="section-img flex-initial lg:col-start-1 md:col-start-2 col-start-1 lg:col-end-8 col-end-12 mt-36">
               <img src={CollSec1} alt="collection img" />

@@ -26,16 +26,16 @@ const Topbar = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="https://maushme.shop/">Shop</a>
+            <a href="https://shop.maushme.com/">Shop</a>
           </li>
           <li>
             <a href="/Collections">Collections</a>
           </li>
           <li>
-            <a href="https://maushme.shop/?page_id=6773">Combos</a>
+            <a href="https://shop.maushme.com/?page_id=6773">Combos</a>
           </li>
           <li>
-            <a href="https://maushme.shop/?page_id=6792">About Us</a>
+            <a href="https://shop.maushme.com/?page_id=6792">About Us</a>
           </li>
         </ul>
       </div>
@@ -50,25 +50,25 @@ const Topbar = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="https://maushme.shop/">Shop</a>
+            <a href="https://shop.maushme.com/">Shop</a>
           </li>
           <li>
             <a href="/Collections">Collections</a>
           </li>
           <li>
-            <a href="https://maushme.shop/?page_id=6773">Giftings</a>
+            <a href="https://shop.maushme.com/?page_id=6773">Giftings</a>
           </li>
           <li>
-            <a href="https://maushme.shop/?page_id=6792">About Us</a>
+            <a href="https://shop.maushme.com/?page_id=6792">About Us</a>
           </li>
         </ul>
       </div>
       </div>
       <div className="top-icon">
         <ul className="flex lg:gap-9 gap-2 text-base body">
-          <li><a href="https://maushme.shop/?page_id=9"><img src={accSvg} /></a></li>
-          <li><a href="https://maushme.shop/?page_id=11"><img src={wishSvg} /></a></li>
-          <li><a href="https://maushme.shop/?page_id=6339"><img src={cartSvg} /></a></li>
+          <li><a href="https://shop.maushme.com/?page_id=9"><img src={accSvg} /></a></li>
+          <li><a href="https://shop.maushme.com/?page_id=11"><img src={wishSvg} /></a></li>
+          <li><a href="https://shop.maushme.com/?page_id=6339"><img src={cartSvg} /></a></li>
           <li onClick={mobileMenuToggle} className="mobile-menu-trigger" ><img src={menuIcon} alt="" /></li>
         </ul>
       </div>

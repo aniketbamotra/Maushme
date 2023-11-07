@@ -22,28 +22,28 @@ const BottomBar = () => {
             <h4 className="body text-white mb-3 font-semibold lg:text-left text-center">MENU</h4>
           <ul>
             <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="/">HOME</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/">SHOP</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/">SHOP</a></li>
             <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="/Collections">COLLECTIONS</a></li>
           </ul>
         </div>
         <div className="ft-col w-1/2">
             <h4 className="body text-white mb-3 font-semibold lg:text-left text-center">SUPPORT</h4>
           <ul>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6792">ABOUT US</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6908">CONTACT US</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=7024">BULK ORDER</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6792">ABOUT US</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6908">CONTACT US</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=7024">BULK ORDER</a></li>
           </ul>
         </div>
         <div className="ft-col w-1/2">
             <h4 className="body text-white mb-3 font-semibold lg:text-left text-center">POLICIES</h4>
           <ul>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6913">PRIVACY POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6919">SHIPPING POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6924">RETURN POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6929">REFUND POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6934">DISCLAIMER POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6939">CANCELLATION POLICY</a></li>
-            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://maushme.shop/?page_id=6944">TERMS OF USE</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6913">PRIVACY POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6919">SHIPPING POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6924">RETURN POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6929">REFUND POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6934">DISCLAIMER POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6939">CANCELLATION POLICY</a></li>
+            <li className="body text-white mb-3 font-light lg:text-left text-center"><a href="https://shop.maushme.com/?page_id=6944">TERMS OF USE</a></li>
           </ul>
         </div>
       </div>

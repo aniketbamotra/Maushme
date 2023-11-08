@@ -2,6 +2,7 @@ import * as React from "react";
 import Topbar from "../components/Topbar";
 import heroVid from "../static/video/hero-vid.mp4";
 import AnimPanel1 from "../components/AnimPanel1";
+import heroImg from "../images/landing-hero-img.jpg";
 import Bestsellers from "../components/Bestsellers";
 import About from "../components/About";
 import lightLogo from "../images/light-logo.png"
@@ -13,7 +14,7 @@ const IndexPage = () => {
     <main className="grid grid-cols-12 overflow-hidden">
       <Topbar />
       <div className="hero-section col-span-full relative h-screen mb-20">
-        <video src={heroVid} autoPlay loop muted className="relative w-screen h-screen object-cover -z-10" />
+      <img src={heroImg} className="relative w-screen h-screen object-cover -z-10" />
         <h1 className="hero-text heading z-10 absolute top-1/4 px-0 2xl:px-36 left-1/2 -translate-x-2/4 text-2xl md:text-4xl xl:text-5xl text-white text-center">
           Discover our wide range of home décor products crafted with finest
           materials.

@@ -107,15 +107,15 @@ const AnimPanel1 = () => {
 
   return (
     <div className="ani-panel-container col-span-full relative mt-20">
-      <div className="column-1 ani-content absolute top-0 xl:left-40 left-10 z-10">
+      <div className="column-1 ani-content absolute xl:-mt-12 top-0 xl:left-40 left-10 z-50">
         <div className="circle-ele xl:w-10 w-5 xl:h-10 h-5 border border-black rounded-full xl:mb-6 mb-4"></div>
         <h4 className="body xl:text-2xl font-bold mb-2">Natural scents</h4>
         <p className="heading xl:text-2xl font-light xl:w-96 w-60 xl:mb-10 mb-6">
           Shop from our wide range of natural scented candles and give your home
           freshness of mother earth.
         </p>
-        <div className="cat-btn xl:p-4 p-2 border w-max rounded-full">
-          <h5 className="body xl:text-base text-xs"><a href="https://maushme.shop/?page_id=7003">EXPLORE CANDLES</a></h5>
+        <div className="cat-btn xl:p-4 p-2 border w-max rounded-full bg-black">
+          <h5 className="body xl:text-base text-xs text-white"><a href="https://shop.maushme.com/?page_id=7003">EXPLORE CANDLES</a></h5>
         </div>
       </div>
       <section class="slides flex flex-col w-full relative z-10">
@@ -124,7 +124,7 @@ const AnimPanel1 = () => {
             <div class="background background1 flex justify-center items-center absolute w-screen h-screen will-change-transform bg-white"></div>
             <div class="content content1 flex justify-center 2xl:pt-40  items-center overflow-hidden text-center w-full relative text-white">
               <div className="">
-                <img src={AnimeImg2} alt="candle" className=" relative z-0 xl:w-96 md:w-60 w-68" />
+                <img src={AnimeImg2} alt="candle" className=" relative z-0 xl:w-96 lg:w-80 md:w-72 sm:w-60 w-68" />
                 <img
                   src={wSphere}
                   alt="sphere"
@@ -142,7 +142,7 @@ const AnimPanel1 = () => {
             <div class="background flex justify-center items-center absolute w-screen h-screen will-change-transform bg-black"></div>
             <div class="content content1 flex justify-center mt-20 items-center overflow-hidden text-center w-full relative text-white">
               <div className="">
-                <img src={AnimeImg1} alt="candle" className=" relative z-0 xl:w-96 w-68" />
+                <img src={AnimeImg1} alt="candle" className=" relative z-0 xl:w-96 lg:w-80 md:w-72 sm:w-60 w-68" />
                 <img
                   src={oSphere}
                   alt="sphere"
@@ -165,7 +165,7 @@ const AnimPanel1 = () => {
         Elevate your space with our candles, crafted from ethical ingredients like soy wax and higher essential oil content. 
         </p>
         <div className="cat-btn xl:p-4 p-2 border w-max rounded-full bg-white">
-          <h5 className="body xl:text-base text-xs text-black "><a href="https://maushme.shop/?page_id=7003">EXPLORE CANDLES</a></h5>
+          <h5 className="body xl:text-base text-xs text-black "><a href="https://shop.maushme.com/?page_id=7003">EXPLORE CANDLES</a></h5>
         </div>
       </div>
 

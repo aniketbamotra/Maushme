@@ -13,7 +13,7 @@ const ProductCard = () => {
   return (
     <div className="product-cards mb-60 flex lg:justify-between justify-around items-center lg:flex-nowrap lg:gap-0 flex-wrap gap-16">
       <div className="card-1 w-max">
-        <img src={bsImg1} alt="prod-img" className=" 2xl:w-80 xl:w-72 md:w-52 w-72" />
+        <img src={bsImg1} alt="prod-img" className=" 2xl:w-80 xl:w-64 md:w-52 w-72" />
         <div className="flex justify-between">
           <h5 className="prod-title body xl:text-xl text-base font-bold">
             Walk on Air
@@ -26,12 +26,12 @@ const ProductCard = () => {
         <div className="body text-xs text-blue-800 font-medium">230GM</div>
         <div className="body font-medium text-xs mb-5">Jasmine Musk</div>
         <div className="price-wrapper flex justify-between items-center">
-            <h3 className="price body font-semibold xl:text-2xl text-base"><span>&#8377;</span>800</h3>
-            <div className="atc-btn body xl:text-base text-sm font-medium xl:py-3 py-1 xl:px-6 px-3 rounded-full"><a href="https://maushme.shop/?product=walk-on-air">View Details</a></div>
+            <h3 className="price body font-semibold 2xl:text-2xl xl:text-xl text-base"><span>&#8377;</span>800</h3>
+            <div className="atc-btn body xl:text-base text-sm font-medium 2xl:py-3 py-1 2xl:px-6 xl:px-4 px-3 rounded-full"><a href="https://shop.maushme.com/?product=walk-on-air">View Details</a></div>
         </div>
       </div>
       <div className="card-1 w-max">
-        <img src={bsImg2} alt="prod-img" className=" 2xl:w-80 xl:w-72 md:w-52 w-72"  />
+        <img src={bsImg2} alt="prod-img" className=" 2xl:w-80 xl:w-64 md:w-52 w-72"  />
         <div className="flex justify-between">
           <h5 className="prod-title body xl:text-xl text-base font-bold">
             A Forest Breeze
@@ -44,12 +44,12 @@ const ProductCard = () => {
         <div className="body text-xs text-blue-800 font-medium">230GM</div>
         <div className="body font-medium text-xs mb-5">Vanilla Sandalwood</div>
         <div className="price-wrapper flex justify-between items-center">
-            <h3 className="price body font-semibold xl:text-2xl text-base"><span>&#8377;</span>800</h3>
-            <div className="atc-btn body xl:text-base text-sm font-medium xl:py-3 py-1 xl:px-6 px-3 rounded-full"><a href="https://maushme.shop/?product=a-forest-breeze">View Details</a></div>
+            <h3 className="price body font-semibold 2xl:text-2xl xl:text-xl text-base"><span>&#8377;</span>800</h3>
+            <div className="atc-btn body xl:text-base text-sm font-medium 2xl:py-3 py-1 2xl:px-6 xl:px-4 px-3 rounded-full"><a href="https://shop.maushme.com/?product=a-forest-breeze">View Details</a></div>
         </div>
       </div>
       <div className="card-1 w-max">
-        <img src={bsImg3} alt="prod-img" className=" 2xl:w-80 xl:w-72 md:w-52 w-72" />
+        <img src={bsImg3} alt="prod-img" className=" 2xl:w-80 xl:w-64 md:w-52 w-72" />
         <div className="flex justify-between">
           <h5 className="prod-title body xl:text-xl text-base font-bold">
             Barnyard
@@ -62,12 +62,12 @@ const ProductCard = () => {
         <div className="body text-xs text-blue-800 font-medium">350GM</div>
         <div className="body font-medium text-xs mb-5">Oudh Honey Truffle</div>
         <div className="price-wrapper flex justify-between items-center">
-            <h3 className="price body font-semibold xl:text-2xl text-base"><span>&#8377;</span>1500</h3>
-            <div className="atc-btn body xl:text-base text-sm font-medium xl:py-3 py-1 xl:px-6 px-3 rounded-full"><a href="https://maushme.shop/?product=barnyard">View Details</a></div>
+            <h3 className="price body font-semibold 2xl:text-2xl xl:text-xl text-base"><span>&#8377;</span>1500</h3>
+            <div className="atc-btn body xl:text-base text-sm font-medium 2xl:py-3 py-1 2xl:px-6 xl:px-4 px-3 rounded-full"><a href="https://shop.maushme.com/?product=barnyard">View Details</a></div>
         </div>
       </div>
       <div className="card-1 w-max">
-        <img src={bsImg4} alt="prod-img" className=" 2xl:w-80 xl:w-72 md:w-52 w-72" />
+        <img src={bsImg4} alt="prod-img" className=" 2xl:w-80 xl:w-64 md:w-52 w-72" />
         <div className="flex justify-between">
           <h5 className="prod-title body xl:text-xl text-base font-bold">
             Spirit of Life
@@ -80,8 +80,8 @@ const ProductCard = () => {
         <div className="body text-xs text-blue-800 font-medium">100ML</div>
         <div className="body font-medium text-xs mb-5">Oudh Patchouli</div>
         <div className="price-wrapper flex justify-between items-center">
-            <h3 className="price body font-semibold xl:text-2xl text-base"><span>&#8377;</span>1200</h3>
-            <div className="atc-btn body xl:text-base text-sm font-medium xl:py-3 py-1 xl:px-6 px-3 rounded-full"><a href="https://maushme.shop/?product=spirit-of-life-2">View Details</a></div>
+            <h3 className="price body font-semibold 2xl:text-2xl xl:text-xl text-base"><span>&#8377;</span>1200</h3>
+            <div className="atc-btn body xl:text-base text-sm font-medium 2xl:py-3 py-1 2xl:px-6 xl:px-4 px-3 rounded-full"><a href="https://shop.maushme.com/?product=spirit-of-life-2">View Details</a></div>
         </div>
       </div>
     </div>
